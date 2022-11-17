@@ -1,0 +1,59 @@
+.background{
+    display: flex;
+    height: 100vh;
+    background-image:url("https://i.pinimg.com/originals/16/b2/b3/16b2b38d1acedd03c56fbb029fd9cf00.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 60em;
+}
+
+.cont{
+    margin-top: 600px;
+    /* margin-left: 30px; */
+    border: 1px solid #15616D;
+    border-radius: 20px;
+    background-color: rgba(240, 240, 240, 0.26);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 140px;
+}
+
+.img{
+    width: 600px;
+    height: 350px;
+    display: flex;
+    margin-left: 1000px;
+}
+
+.button{
+    width: 300px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-family:monospace;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 14px 22px;
+    transition: all .2s;
+    touch-action: manipulation;
+}
+.button:hover{
+    background-color:transparent;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+

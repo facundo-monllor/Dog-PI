@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;468&display=swap');
+
+.link{
+    height: 450px;
+    width: 300px;
+    text-decoration: none;
+    margin: 45px;
+}
+
+.cont{
+    height: 450px;
+    width: 300px;
+    /* border: solid 1px rgb(255, 255, 255); */
+    overflow: hidden;
+    border-radius: 30px;
+    /* margin: 45px; */
+    /* box-shadow: rgba(0, 0, 0, 0.9) 1px 2px 4px; */
+    background-color: white;
+    box-shadow: 0px 0px 53px -20px rgb(2, 2, 2);
+    transition: all ease-in-out .4s;
+    position: relative;
+}
+.cont:hover{
+    Transform:scale(1.1);
+    box-shadow: 0px 0px 27px 11px rgb(255, 251, 251);
+}
+
+
+.imagen{
+    height: 220px;
+    width: 300px;
+}
+
+.name{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 23px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.tempers{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight:500;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.weight{
+    font-weight: 500;
+    margin-left: 20px;
+    bottom: 1%;
+    display: flex;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.www{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(245, 114, 39);
+    position:absolute;
+    bottom: 0;
+}

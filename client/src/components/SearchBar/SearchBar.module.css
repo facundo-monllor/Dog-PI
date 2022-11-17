@@ -1,0 +1,43 @@
+.cont{
+    margin-top: 25px;
+    position: relative;
+}
+
+.cont2{
+    position: absolute;
+}
+
+.input{
+    margin-left: 100px;
+    width: 380px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: none;
+    box-shadow: rgba(243, 0, 0, 0.6) 0px 1px 3px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+}
+
+.input:focus{
+    border: 2px solid rgb(255, 124, 124);
+    outline: none;
+}
+
+.button{
+    min-height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: rgb(245, 161, 161);
+    box-shadow: rgba(243, 0, 0, 0.877) 0px 1px 3px;
+}
+
+.button:hover,
+  .button:active {
+    background-color: initial;
+    cursor: pointer;
+  }

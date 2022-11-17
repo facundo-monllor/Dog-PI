@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+.cont{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 80px;
+    margin-left: 320px;
+    height: 700px;
+    width: 1200px;
+    /* border: solid 1px rgb(255, 255, 255); */
+    overflow: hidden;
+    border-radius: 30px;
+    /* margin: 45px; */
+    /* box-shadow: rgba(0, 0, 0, 0.9) 1px 2px 4px; */
+    background-color: white;
+    box-shadow: 0px 0px 53px -20px rgb(2, 2, 2);
+    transition: all ease-in-out .4s;
+    position: relative;
+}
+
+.divTodo{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-around;
+}
+
+.divInput{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    width: 350px;
+    height: 350px;
+    border: 2px solid;
+    border-color: rgb(221, 99, 99);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+.inpImg{
+    display: flex;
+    justify-content: center;
+}
+
+.create{
+    display: flex;
+    margin-left: 500px;
+    color: #fca9a9;
+    text-shadow: 4px 3px 0px #000000;
+    font-family: 'Boogaloo', cursive;
+}
+
+input{
+    /* margin-left: 100px; */
+    margin-top: 5px;
+    width: 100px;
+    color: rgb(36, 35, 42);
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 28px;
+    border-radius: 4px;
+    /* padding: 8px 16px; */
+    border: none;
+    box-shadow: rgba(243, 0, 0, 0.5) 0px 1px 3px;
+    background: rgb(251, 251, 251);
+    transition: all 0.1s ease 0s;
+    outline: none;
+}
+
+label{
+    margin: 10px;
+    font-size: 20px;
+    /* margin-left: 40px; */
+}
+
+.img{
+    margin-top: 20px;
+    width: 300px;
+    height: 220px;
+}
+
+.tempers{
+    margin-top: 20px;
+}
+
+.select{
+    height: 30px;
+    width: 123px;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #f89c9c;
+    box-shadow: #ff0000  0px 1px 3px;
+  }
+  
+.select:focus{
+    border: 2px solid #ade8f4;
+    outline: none;
+}
+
+
+.hola{
+    color: #000000;
+    margin-right: 500px;
+}
+
+
+.divLabel{
+    display: flex;
+}
+
+.error{
+    font-size: 10px;
+    color: #ff0000;
+}
+
+.tags{
+    display: flex;
+    margin-left: 100px;
+    margin-top: -280px;
+    flex-wrap: wrap;
+    width: 680px;
+}
+
+.divTemps{
+    display: flex;
+    position: relative;
+    margin: 5px;
+    padding: 2px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid red;
+    box-shadow: 0 5px 5px rgb(255, 60, 0,0.4);
+}
+
+.pTemps{
+    font-weight: 600;
+    width: 100px;
+}
+
+.butTemps{
+    background-color: #f89c33;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 10px 0px 10px 10px;
+    border: transparent;
+    height: 20px;
+}
+
+.divBoton{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.botones {
+    margin: 5px;
+    background: #ff6060;
+    border: 1px solid #ff0800;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .botones:hover,
+  .botones:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #ff4242;
+  }
+  
+  .botones:active {
+    opacity: .5;
+  }
