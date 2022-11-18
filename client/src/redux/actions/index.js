@@ -10,10 +10,12 @@ export const SEARCH_DOGS = "SEARCH_DOGS"
 export const CREATE_DOGS = "CREATE_DOGS"
 export const DETAILS_DOGS = "DETAILS_DOGS"
 
+// const URL = "http://localhost:3001"
+const URL = "https://dog-pi-production.up.railway.app"
 
 export function getDogs(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/api/dogs/")
+        let json = await axios.get(`${URL}/api/dogs/`)
         return dispatch({
             type: GET_DOGS,
             payload: json.data
@@ -23,7 +25,7 @@ export function getDogs(){
 
 export function allTemps(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/api/temperaments/")
+        let json = await axios.get(`${URL}/api/temperaments/`)
         return dispatch({
             type: ALL_TEMPS,
             payload: json.data
@@ -34,7 +36,7 @@ export function allTemps(){
 export function searchDogs(breed){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3001/api/dogs?name=${breed}`)
+            let json = await axios.get(`${URL}/api/dogs?name=${breed}`)
             return dispatch({
                 type: SEARCH_DOGS,
                 payload: json.data
@@ -47,7 +49,7 @@ export function searchDogs(breed){
 
 export function createDogs(payload){
     return async function(){
-        let json = await axios.post("http://localhost:3001/api/dogs",payload);
+        let json = await axios.post(`${URL}/api/dogs`,payload);
         return json
     }
 }
@@ -55,7 +57,7 @@ export function createDogs(payload){
 export function detailsDogs(id){
     return async function(dispatch){
         try{
-            let json = await axios.get(`http://localhost:3001/api/dogs/${id}`)
+            let json = await axios.get(`${URL}/api/dogs/${id}`)
             return dispatch({
                 type: DETAILS_DOGS,
                 payload: json.data
