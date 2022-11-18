@@ -62,7 +62,7 @@ export default function rootReducer (state = initialState, action){
         case ORDER_AZ:
             let orderAZ
             if(action.payload === "alphabetically"){
-                orderWeight = state.dogs
+                orderAZ = state.dogs
             }
             if(action.payload === "a-z"){
                 orderAZ = state.dogs.sort(function(a,b){

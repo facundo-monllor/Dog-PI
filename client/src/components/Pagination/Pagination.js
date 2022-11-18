@@ -8,6 +8,8 @@ export default function Pagination({dogs, DogsPerPage, numeration,currentPage, s
     const [pageNumberLimit, setPageNumberLimit] = useState(5);
     const [maxPageLimit, setMaxPageLimit] = useState(5);
     const [minPageLimit, setMinPageLimit] = useState(0);
+    console.log(setPageNumberLimit)
+
     
     for (let i = 1; i <= Math.ceil(dogs.length/DogsPerPage); i++){
         pageNumbers.push(i)

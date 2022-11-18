@@ -213,7 +213,7 @@ export default function CreateDog(){
                 <div className={style.divImg}>
                     <label>Img:</label>
                     <input type="text" name="img" value={input.img} onChange={(e) => handleInput(e)} placeholder="URL" className={style.inpImg}/>
-                    <img src={input.img ? input.img : "https://i.pinimg.com/736x/b2/4a/69/b24a69c17a1c581bc839c71d889f15f5.jpg"} className={style.img}/>
+                    <img src={input.img ? input.img : "https://i.pinimg.com/736x/b2/4a/69/b24a69c17a1c581bc839c71d889f15f5.jpg"} alt ="foto" className={style.img}/>
                 </div>
         </div>
 

@@ -14,7 +14,7 @@ export default function DogsDetails(){
 
     React.useEffect(() => {
         dispatch(detailsDogs(params.id))
-    },[dispatch])
+    },[params.id,dispatch])
 
 
     return(

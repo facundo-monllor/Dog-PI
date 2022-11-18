@@ -13,7 +13,7 @@ import style from "./Home.module.css"
 export default function Home(){
     let dispatch = useDispatch()
     const dogs = useSelector((state) => state.dogs)
-    const allDogs= useSelector((state) => state.noFiltered)
+    // const allDogs= useSelector((state) => state.noFiltered)
     const [order, setOrder] = useState("")
     
     
@@ -28,6 +28,8 @@ export default function Home(){
     const lastDog = currentPage * DogsPerPage
     const firstDog = lastDog - DogsPerPage
     const currentDogs = Array.from(dogs).slice(firstDog,lastDog)
+    
+    console.log(order,setDogsPerPage)
     
 
     const numeration = (pageNumber) => {
