@@ -102,7 +102,7 @@ export function deleteDog(id){
     // console.log(id)
     return async function(){
         try{
-            return axios.delete(`http://localhost:3001/api/dogs/${id}`)
+            return axios.delete(`${URL}/api/dogs/${id}`)
         }catch(e){
             console.log(e.message)
         }
