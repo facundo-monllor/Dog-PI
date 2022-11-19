@@ -57,4 +57,16 @@ router.post("/", async (req,res,next) => {
     }
 })
 
+router.delete("/:id", async (req,res,next) => {
+    try{
+        let {id} = req.params
+        const resp = await Breed.destroy({
+            where: {id}
+        });
+        res.status(200).json(resp)
+    }catch(e){
+        res.status(404).send(e.message)
+    }
+})
+
 module.exports = router;

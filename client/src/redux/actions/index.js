@@ -9,6 +9,7 @@ export const ORDER_WEIGHT = "ORDER_WEIGHT"
 export const SEARCH_DOGS = "SEARCH_DOGS"
 export const CREATE_DOGS = "CREATE_DOGS"
 export const DETAILS_DOGS = "DETAILS_DOGS"
+export const DELETE_DOG = "DELETE_DOG"
 
 // const URL = "http://localhost:3001"
 const URL = "https://dog-pi-production.up.railway.app"
@@ -97,4 +98,23 @@ export function orderWeight(payload){
     }
 }
 
+export function deleteDog(id){
+    // console.log(id)
+    return async function(){
+        try{
+            return axios.delete(`http://localhost:3001/api/dogs/${id}`)
+        }catch(e){
+            console.log(e.message)
+        }
+    }
+}
 
+// export function deleteDog(id){
+//     console.log(id)
+//     return async function(){
+//         return fetch(`http://localhost:3001/api/dogs/${id}`,{
+//             method: "DELETE",
+//             Headers: {"Content-Type" : "application/json"}
+//         })
+//     }
+// }

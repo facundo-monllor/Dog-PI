@@ -129,7 +129,7 @@ label{
     margin-left: 100px;
     margin-top: -280px;
     flex-wrap: wrap;
-    width: 680px;
+    width: 670px;
 }
 
 .divTemps{
@@ -145,7 +145,7 @@ label{
 
 .pTemps{
     font-weight: 600;
-    width: 100px;
+    /* width: 100px; */
 }
 
 .butTemps{

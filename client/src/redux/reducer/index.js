@@ -1,4 +1,4 @@
-import { GET_DOGS, ALL_TEMPS, FILTER_TEMPS, FILTER_FROM, ORDER_AZ, ORDER_WEIGHT, SEARCH_DOGS, CREATE_DOGS, DETAILS_DOGS } from "../actions";
+import { GET_DOGS, ALL_TEMPS, FILTER_TEMPS, FILTER_FROM, ORDER_AZ, ORDER_WEIGHT, SEARCH_DOGS, CREATE_DOGS, DETAILS_DOGS, DELETE_DOG } from "../actions";
 
 const initialState = {
     dogs: [],
@@ -102,6 +102,10 @@ export default function rootReducer (state = initialState, action){
             return{
                 ...state,
                 dogs: orderWeight
+            }
+        case DELETE_DOG:
+            return{
+                ...state
             }
             default:
                 return{...state}
