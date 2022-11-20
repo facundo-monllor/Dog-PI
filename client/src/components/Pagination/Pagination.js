@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./Pagination.module.css"
 
 export default function Pagination({dogs, DogsPerPage, numeration,currentPage, setCurrentPage, pageNumberLimit, setPageNumberLimit, maxPageLimit, setMaxPageLimit, minPageLimit, setMinPageLimit}){
