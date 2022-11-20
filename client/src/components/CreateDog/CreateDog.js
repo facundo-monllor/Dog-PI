@@ -25,7 +25,7 @@ export default function CreateDog(){
         if(input.name.search("[0-9]") !== -1){
             errors.name = "The name must not contain numbers"
         }
-        if(dogs.find(d => d.name === input.name)){
+        if(dogs.find(d => d.name.toLowerCase() === input.name.toLowerCase())){
             errors.name = ("Name cannot be repeated")
         }
         if(!input.heightMin){

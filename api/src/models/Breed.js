@@ -42,9 +42,6 @@ module.exports = (sequelize) => {
     img: {
       type: DataTypes.STRING,
       defaultValue: "https://i.pinimg.com/736x/b2/4a/69/b24a69c17a1c581bc839c71d889f15f5.jpg",
-      // validate: {
-      //   isUrl: true,
-      // },
     },
     createdDB: {
       type: DataTypes.BOOLEAN,

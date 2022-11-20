@@ -36,7 +36,7 @@ export default function DogsDetails(){
                 <div className={style.data}>
                   { details[0].createdDB === true ? <button onClick={(e) => dogDelete(e)} className={style.xBut}>DELETE</button> : null}
                     
-                    <h1 className={style.name}>{details[0].name}</h1>
+                    <h1 className={style.name}>{details[0].name.charAt(0).toUpperCase() + details[0].name.slice(1)}</h1>
 
                 <div className={style.info}>
                   <div className={style.height}>

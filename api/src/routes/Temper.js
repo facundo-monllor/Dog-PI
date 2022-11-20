@@ -14,8 +14,8 @@ router.get("/", async(req,res) => {
     try{
         const respuesta = await allTemps()
         res.status(200).send(respuesta)
-    }catch(err){
-        res.status(400).send(err.message)
+    }catch(e){
+        res.status(400).send(e.message)
     }
     
 })
