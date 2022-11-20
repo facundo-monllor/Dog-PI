@@ -29,6 +29,10 @@ export default function Home(){
     const firstDog = lastDog - DogsPerPage
     const currentDogs = Array.from(dogs).slice(firstDog,lastDog)
 
+    const [pageNumberLimit, setPageNumberLimit] = useState(5);
+    const [maxPageLimit, setMaxPageLimit] = useState(5);
+    const [minPageLimit, setMinPageLimit] = useState(0);
+
     // console.log(currentDogs)
     console.log(order,setDogsPerPage)
     
@@ -40,10 +44,19 @@ export default function Home(){
     if(!allDogs.length){
         return(
             <div className={style.inputs}>
-            <SearchBar />
+            <SearchBar
+            setCurrentPage= {setCurrentPage}
+            setPageNumberLimit = {setPageNumberLimit}
+            setMaxPageLimit = {setMaxPageLimit}
+            setMinPageLimit = {setMinPageLimit}
+            />
             <Filter
                 setCurrentPage= {setCurrentPage}
-                setOrder= {setOrder}/>
+                setOrder= {setOrder}
+                setPageNumberLimit = {setPageNumberLimit}
+                setMaxPageLimit = {setMaxPageLimit}
+                setMinPageLimit = {setMinPageLimit}
+                />
                 <div className={style.Loading}>
                     <img src="https://cdn.dribbble.com/users/1142616/screenshots/5310753/loading-dog.gif" alt="loading" className={style.landing}/>
                 </div>
@@ -53,10 +66,19 @@ export default function Home(){
         return(
         <div>
             <div className={style.inputs}>
-            <SearchBar />
+            <SearchBar
+            setCurrentPage= {setCurrentPage}
+            setPageNumberLimit = {setPageNumberLimit}
+            setMaxPageLimit = {setMaxPageLimit}
+            setMinPageLimit = {setMinPageLimit}
+            />
             <Filter
                 setCurrentPage= {setCurrentPage}
-                setOrder= {setOrder}/>
+                setOrder= {setOrder}
+                setPageNumberLimit = {setPageNumberLimit}
+                setMaxPageLimit = {setMaxPageLimit}
+                setMinPageLimit = {setMinPageLimit}
+                />
             </div>
 
             <ul className={style.cards}>    
@@ -81,6 +103,15 @@ export default function Home(){
             setCurrentPage= {setCurrentPage}
             DogsPerPage = {DogsPerPage}
             numeration = {numeration}
+
+            pageNumberLimit = {pageNumberLimit}
+            setPageNumberLimit= {setPageNumberLimit}
+            maxPageLimit = {maxPageLimit}
+            setMaxPageLimit = {setMaxPageLimit}
+            minPageLimit = {minPageLimit}
+            setMinPageLimit = {setMinPageLimit}
+
+
             />
             
         </div>
@@ -89,10 +120,19 @@ export default function Home(){
         return(
         <div>
             <div className={style.inputs}>
-            <SearchBar />
+            <SearchBar
+            setCurrentPage= {setCurrentPage}
+            setPageNumberLimit = {setPageNumberLimit}
+            setMaxPageLimit = {setMaxPageLimit}
+            setMinPageLimit = {setMinPageLimit}
+            />
             <Filter
                 setCurrentPage= {setCurrentPage}
-                setOrder= {setOrder}/>
+                setOrder= {setOrder}
+                setPageNumberLimit = {setPageNumberLimit}
+                setMaxPageLimit = {setMaxPageLimit}
+                setMinPageLimit = {setMinPageLimit}
+                />
             </div>
             
             <div className={style.notFound}>

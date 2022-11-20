@@ -7,7 +7,7 @@ import { searchDogs } from "../../redux/actions";
 import style from "./SearchBar.module.css"
 
 
-export default function SearchBar(){
+export default function SearchBar({setCurrentPage, setPageNumberLimit, setMaxPageLimit, setMinPageLimit}){
     let dispatch = useDispatch()
 
     const [search, setSearch] = useState("")
@@ -20,6 +20,10 @@ export default function SearchBar(){
 
     const handleClick = (e) => {
         e.preventDefault()
+        setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(searchDogs(search))
         setSearch("")
     }

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import style from "./Pagination.module.css"
 
-export default function Pagination({dogs, DogsPerPage, numeration,currentPage, setCurrentPage}){
+export default function Pagination({dogs, DogsPerPage, numeration,currentPage, setCurrentPage, pageNumberLimit, setPageNumberLimit, maxPageLimit, setMaxPageLimit, minPageLimit, setMinPageLimit}){
 
     const pageNumbers = []
 
-    const [pageNumberLimit, setPageNumberLimit] = useState(5);
-    const [maxPageLimit, setMaxPageLimit] = useState(5);
-    const [minPageLimit, setMinPageLimit] = useState(0);
+    // const [pageNumberLimit, setPageNumberLimit] = useState(5);
+    // const [maxPageLimit, setMaxPageLimit] = useState(5);
+    // const [minPageLimit, setMinPageLimit] = useState(0);
     console.log(setPageNumberLimit)
 
     

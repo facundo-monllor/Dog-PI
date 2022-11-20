@@ -4,7 +4,7 @@ import { allTemps, filterTemps, filterFrom, orderAZ, orderWeight, getDogs } from
 
 import style from "./Filter.module.css"
 
-export default function Filter({setCurrentPage, setOrder}){
+export default function Filter({setCurrentPage, setOrder, setPageNumberLimit, setMaxPageLimit, setMinPageLimit}){
     let dispatch = useDispatch()
     const tempers = useSelector((state) => state.tempers)
 
@@ -13,32 +13,47 @@ export default function Filter({setCurrentPage, setOrder}){
     },[dispatch])
     
     const handleFilterTemp = (e) => {
+        setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(filterTemps(e.target.value))
-        setCurrentPage(1);
     }
 
     const handleFilterFrom = (e) => {
+        setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(filterFrom(e.target.value))
-        setCurrentPage(1);
     }
 
     const handleOrderAz = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(orderAZ(e.target.value))
-        setCurrentPage(1);
         setOrder(`order in ${e.target.value}`)
     }
 
     const handleOrderWeight = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+        setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(orderWeight(e.target.value))
-        setCurrentPage(1);
         setOrder(`order in ${e.target.value}`)
     }
 
     const handleReset = (e) => {
         e.preventDefault()
         setCurrentPage(1)
+        setPageNumberLimit(5)
+        setMaxPageLimit(5)
+        setMinPageLimit(0)
         dispatch(getDogs())
     }
 
