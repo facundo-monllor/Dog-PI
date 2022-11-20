@@ -21,7 +21,7 @@ export default function Home(){
         dispatch(getDogs())
     },[dispatch])
     
-    console.log(dogs)
+    // console.log(dogs)
     
     const [currentPage,setCurrentPage] = useState(1)
     const [DogsPerPage, setDogsPerPage] = useState(8)
@@ -29,7 +29,7 @@ export default function Home(){
     const firstDog = lastDog - DogsPerPage
     const currentDogs = Array.from(dogs).slice(firstDog,lastDog)
 
-    console.log(currentDogs)
+    // console.log(currentDogs)
     console.log(order,setDogsPerPage)
     
 

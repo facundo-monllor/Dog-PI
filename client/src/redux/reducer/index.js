@@ -24,7 +24,7 @@ export default function rootReducer (state = initialState, action){
         case SEARCH_DOGS:
             return{
                 ...state,
-                dogs: action.payload
+                dogs: Array.isArray(action.payload) === true ? action.payload : []
             }
         case CREATE_DOGS:
             return{
