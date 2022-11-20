@@ -10,7 +10,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.get("/", async(req,res,next) => {
+router.get("/", async(req,res) => {
     try{
         const respuesta = await allTemps()
         res.status(200).send(respuesta)

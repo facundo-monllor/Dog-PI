@@ -12,17 +12,17 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.get("/", async (req,res,next) => {
+router.get("/", async (req,res) => {
     try{
         const respuesta = await allInfo()
         const {name} = req.query
         if(name){
             let breedName = respuesta.filter((d) => 
             d.name.toLowerCase().includes(name.toLowerCase()))
-            if(breedName){
-                return res.status(200).send(breedName)
+            if(breedName.length === 0){
+                return res.status(200).send("the dog does not exist")
             }else{
-                return res.status(400).send("Breed no found in the Data")
+                return res.status(200).send(breedName)
             }
         }
         res.status(200).send(respuesta)
@@ -32,7 +32,7 @@ router.get("/", async (req,res,next) => {
 })
 
 
-router.get("/:idRaza", async (req,res,next) => {
+router.get("/:idRaza", async (req,res) => {
         const {idRaza} = req.params
         const all = await allInfo()
         let founded = all.find((b) => b.id == idRaza)
@@ -46,7 +46,7 @@ router.get("/:idRaza", async (req,res,next) => {
 })
 
 
-router.post("/", async (req,res,next) => {
+router.post("/", async (req,res) => {
     try{
         let {name,heightMin, heightMax, weightMin, weightMax, lifeMin, lifeMax, img, tempers} = req.body
         await allTemps()
@@ -57,7 +57,7 @@ router.post("/", async (req,res,next) => {
     }
 })
 
-router.delete("/:id", async (req,res,next) => {
+router.delete("/:id", async (req,res) => {
     try{
         let {id} = req.params
         const resp = await Breed.destroy({
@@ -68,5 +68,7 @@ router.delete("/:id", async (req,res,next) => {
         res.status(404).send(e.message)
     }
 })
+
+router.put("/")
 
 module.exports = router;

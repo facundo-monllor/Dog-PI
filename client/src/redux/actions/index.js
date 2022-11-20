@@ -43,7 +43,8 @@ export function searchDogs(breed){
                 payload: json.data
             })
         }catch(e){
-            alert("Sorry, the Dog you are looking for doesn't exists")
+            // alert("Sorry, the Dog you are looking for doesn't exists")
+            return ("the dog does not exist")
         }
     }
 }
