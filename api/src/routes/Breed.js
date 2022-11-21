@@ -63,12 +63,35 @@ router.delete("/:id", async (req,res) => {
         const resp = await Breed.destroy({
             where: {id}
         });
-        res.status(200).json(resp)
+        res.status(200).send(`${resp} dogs removes`)
     }catch(e){
         res.status(404).send(e.message)
     }
 })
 
-router.put("/")
+router.put("/:id", async (req,res) => {
+    try{
+        const {id} = req.params
+        const {name,heightMin, heightMax, weightMin, weightMax, lifeMin, lifeMax, img, tempers} = req.body
+        const resp = await Breed.update({
+        name: name,
+        heightMin: heightMin,
+        heightMax: heightMax,
+        weightMin: weightMin,
+        weightMax: weightMax,
+        lifeMin: lifeMin,
+        lifeMax: lifeMax,
+        img: img,
+        tempers: tempers
+        },
+        {
+            where: {id}
+        }
+        )
+        res.status(200).send(`${resp} dogs modified`)
+    }catch(e){
+        res.status(404).send(e.message)
+    }
+})
 
 module.exports = router;

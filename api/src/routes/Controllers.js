@@ -8,9 +8,7 @@ let link = `https://api.thedogapi.com/v1/breeds?api_key=${YOUR_API_KEY}`
 
 const apiInfo = async () => {
     const respuesta = await axios.get(link)
-    // let breedArray = []
     return await respuesta.data.map((b) => {
-    // let temperamento = d.temperament ? d.temperament.split(", ") : ""
         let breedInfo = {
             id: b.id,
             name: b.name,
@@ -24,7 +22,6 @@ const apiInfo = async () => {
             tempers: b.temperament ? b.temperament.split(", ") : [],
             createdDB: false
         };
-        // breedArray.push(breedInfo)
       return breedInfo
 });
 }
@@ -34,9 +31,6 @@ const dbInfo = async () => {
         include : {
             model: Temper,
             attributes : ["id", "name"],
-            through: {
-                attributes: [],
-            }
         }
     })
 
