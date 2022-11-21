@@ -156,6 +156,7 @@ label{
     border-radius: 10px 0px 10px 10px;
     border: transparent;
     height: 20px;
+    cursor: pointer;
 }
 
 .divBoton{
