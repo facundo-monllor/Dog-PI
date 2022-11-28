@@ -9,7 +9,6 @@ import dogsDetails from './components/DogDetails/DogDetails';
 import NavBar from './components/NavBar/NavBar';
 
 
-
 function App() {
   return (
     <React.Fragment>
@@ -17,7 +16,7 @@ function App() {
       <Route exact path="/" component={Landing} />  
       <Route path="/" component={NavBar}/>
       </Switch>
-      <Route exact path="/home" component={Home} />
+      <Route exact path="/home" component={Home}></Route>
       <Route exact path="/create" component={CreateDog}></Route>
       <Route exact path="/home/:id" component={dogsDetails}></Route>
     </React.Fragment>

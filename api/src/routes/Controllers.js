@@ -39,7 +39,7 @@ const dbInfo = async () => {
             ...t.dataValues,
             tempers: t.tempers.map((t) => t.name)
         }
-    }) 
+    })
     return tempDB
 }
 
@@ -79,7 +79,6 @@ const allTemps = async () => {
     return allTemperaments
 }
 
-// allTemps()
 
 const createBreed = async (name,heightMin, heightMax, weightMin, weightMax, lifeMin, lifeMax, img, tempers) => {
      if(!name || !heightMin || !heightMax || !weightMin || !weightMax || !lifeMin || !lifeMax){

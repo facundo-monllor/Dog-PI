@@ -13,9 +13,6 @@ module.exports = (sequelize) => {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
-        // set(value){
-        //   return this.setDataValue("name", value.charAt(0).toUpperCase() + value.slice(1))
-        // }
     },
     heightMin: {
         type: DataTypes.INTEGER,

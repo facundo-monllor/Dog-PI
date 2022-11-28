@@ -103,19 +103,9 @@ export function deleteDog(id){
     // console.log(id)
     return async function(){
         try{
-            return axios.delete(`${URL}/api/dogs/${id}`)
+            return await axios.delete(`${URL}/api/dogs/${id}`)
         }catch(e){
             console.log(e.message)
         }
     }
 }
-
-// export function deleteDog(id){
-//     console.log(id)
-//     return async function(){
-//         return fetch(`http://localhost:3001/api/dogs/${id}`,{
-//             method: "DELETE",
-//             Headers: {"Content-Type" : "application/json"}
-//         })
-//     }
-// }

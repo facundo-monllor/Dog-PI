@@ -18,18 +18,18 @@ export default function Pagination({dogs, DogsPerPage, numeration,currentPage, s
     const handlePrev = () => {
         setCurrentPage(currentPage - 1)
         
-        if((currentPage - 1 )%pageNumberLimit === 0){
-        setMaxPageLimit(maxPageLimit - pageNumberLimit)
-        setMinPageLimit(minPageLimit - pageNumberLimit)
+        if((currentPage - 1 )%pageNumberLimit === 0){ // 6 - 1 % 5
+        setMaxPageLimit(maxPageLimit - pageNumberLimit) // 10 - 5 = 5
+        setMinPageLimit(minPageLimit - pageNumberLimit) // 5 - 5 = 0
     }
     }
 
     const handleNext = () => {
         setCurrentPage(currentPage + 1)
         
-        if(currentPage + 1 > maxPageLimit){
-        setMaxPageLimit(maxPageLimit + pageNumberLimit)
-        setMinPageLimit(minPageLimit + pageNumberLimit)
+        if(currentPage + 1 > maxPageLimit){ // 5 + 1 > 5 
+        setMaxPageLimit(maxPageLimit + pageNumberLimit) // 5 + 5 = 10
+        setMinPageLimit(minPageLimit + pageNumberLimit) // 0 5 = 5
     }
     }
     
